@@ -8,6 +8,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                sh 'python3 --version'
+                sh 'pip3 install -U pytest'
                 echo 'Hello World'
             }
         }

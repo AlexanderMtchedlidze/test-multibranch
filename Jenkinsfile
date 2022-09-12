@@ -6,12 +6,14 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('SetUp') {
             steps {
-                sh 'python3 --version'
                 sh 'pip3 install -U pytest --user'
-                sh 'python3 -m pytest --version'
-                echo 'Hello World'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'python3 -m pytest aleko.py'
             }
         }
     }

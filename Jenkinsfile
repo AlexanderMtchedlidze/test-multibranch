@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'python3 --version'
                 sh 'pip3 install -U pytest --user'
-                sh 'pip3 pytest --version'
+                sh 'python3 -m pytest --version'
                 echo 'Hello World'
             }
         }

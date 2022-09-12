@@ -9,7 +9,7 @@ pipeline {
         stage('Hello') {
             steps {
                 sh 'python3 --version'
-                sh 'pip3 install -U pytest'
+                sh 'pip3 install -U pytest --user'
                 echo 'Hello World'
             }
         }

@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh 'python3 --version'
                 sh 'pip3 install -U pytest --user'
+                sh 'pytest aleko.py'
                 echo 'Hello World'
             }
         }
